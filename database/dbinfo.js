@@ -1,4 +1,18 @@
-const username = 'blrusnell';
-const pw = '@00Notation7';
+const mariadb = require('mariadb');
+const pool = mariadb.createPool({
+     host: 'localhost', 
+     user:'root', 
+     password: 'jcm800mason',
+     database: 'SDC-Reviews'
+});
 
-module.exports = {username, pw};
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/Reviews');
+
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//   console.log('were connected!')
+// });
+
+module.exports = {pool};
