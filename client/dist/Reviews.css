@@ -2,8 +2,8 @@
 } */
 
 .container-reviews {
-    position: absolute;
-    top: 980px;
+    /* position: absolute;
+    top: 980px; */
     background: white;
     padding: 0 40px 40px;
     width: 53%;
@@ -73,7 +73,7 @@
     border-top: 1px solid #ccc;
 } 
 
-  .review-data-reviews {
+.review-data-reviews {
     margin-left: 10%;
 } 
 

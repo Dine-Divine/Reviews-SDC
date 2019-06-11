@@ -6,24 +6,24 @@ const pool = mariadb.createPool({
      database: 'SDC-Reviews'
 });
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Reviews');
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/Reviews');
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('were connected!')
-});
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//   console.log('were connected!')
+// });
 
-const schema = mongoose.Schema({
-     avatar: String,
-     ' name': String,
-     ' review': String,
-     ' date': String,
-     ' rating': Number,
-     ' uuid': Number
-});
+// const schema = mongoose.Schema({
+//      avatar: String,
+//      ' name': String,
+//      ' review': String,
+//      ' date': String,
+//      ' rating': Number,
+//      ' uuid': Number
+// });
 
-const Reviews = mongoose.model('Review', schema)
+// const Reviews = mongoose.model('Review', schema)
 
-module.exports = {pool, Reviews};
+module.exports = {pool};
