@@ -1,0 +1,18 @@
+config:
+  target: "http://localhost:3004"
+  phases:
+    - duration: 20
+      arrivalRate: 20
+    - duration: 60
+      arrivalRate: 20
+      rampTo: 200
+    - duration: 60
+      arrivalRate: 200
+      rampTo: 500
+    - duration: 60
+      arrivalRate: 500
+      rampTo: 1000
+scenarios:
+  - flow:
+    - get:
+        url: "/reviews?uuid=7057203"
