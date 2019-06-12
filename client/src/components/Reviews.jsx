@@ -9,7 +9,7 @@ class Reviews extends React.Component {
 
         this.state = {
             uuid: 1,
-            reviews: [{rating: 0, name: '', date: '', review: '', avatar: ''}]
+            reviews: [{rating: 0, name:'', date:'', review:'', avatar:''}]
         }
         this.dateChanger = this.dateChanger.bind(this);
     }
@@ -52,7 +52,7 @@ class Reviews extends React.Component {
     }
 
     dateChanger(date) {
-        return date.substring(4, 24);
+        return date.substring(6, 26);
     }
 
     render() {
@@ -66,7 +66,7 @@ class Reviews extends React.Component {
                 {this.state.reviews.map((review, index) => {
                     return(
                         <div className='one-review-reviews' key={index}>
-                            <img src={review.avatar} alt="Avatar-reviews" className="images-reviews"/>
+                            <img src={review.avatar.substring(1, review.avatar.length -1)} alt="Avatar-reviews" className="images-reviews"/>
                             <div className='review-data-reviews'>
                                 <div className='names-reviews'>{review.name}</div>
                                 <div className='dates-reviews'>{this.dateChanger(review.date)}</div>
