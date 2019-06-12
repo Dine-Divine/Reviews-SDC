@@ -1,4 +1,4 @@
-require('newrelic');
+
 const cluster = require('cluster');
 const cpuCount = require('os').cpus().length;
 console.log(cpuCount)
@@ -38,7 +38,7 @@ if (cluster.isMaster){
     console.log(req.query);
     pool.getConnection()
     .then(conn => {
-      conn.query(`SELECT * from reviews where UUID = ${req.query.uuid}`)
+      conn.query(`SELECT * from Reviews where UUID = ${req.query.uuid}`)
       .then((rows) => {
         res.send(rows);
         conn.end();

@@ -2,8 +2,12 @@ config:
   target: "http://localhost:3004"
   phases:
     - duration: 30
-      arrivalRate: 10
+      arrivalRate: 50
 scenarios:
   - flow:
     - get:
         url: "/reviews?uuid=7057203"
+    - get:
+        url: "/reviews?uuid=3195486"
+    - get:
+        url: "/reviews?uuid=7209624"
