@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import Reviews from './components/Reviews.jsx';
 
 
-// ReactDOM.render(<Reviews />, document.getElementById('reviews'));
+ReactDOM.render(<Reviews />, document.getElementById('reviews'));
 
-window.Reviews = Reviews;
+//window.Reviews = Reviews;
