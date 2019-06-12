@@ -15,7 +15,7 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:3004/reviews?uuid=${this.state.uuid}`)
+        axios.get(`http://ec2-18-191-213-234.us-east-2.compute.amazonaws.com/reviews?uuid=${this.state.uuid}`)
         .then((response) => {
             console.log(response.data);
             this.setState({

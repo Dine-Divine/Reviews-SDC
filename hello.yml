@@ -1,8 +1,8 @@
 config:
-  target: "http://localhost:3004"
+  target: "http://ec2-18-191-213-234.us-east-2.compute.amazonaws.com"
   phases:
     - duration: 30
-      arrivalRate: 50
+      arrivalRate: 100
 scenarios:
   - flow:
     - get:
