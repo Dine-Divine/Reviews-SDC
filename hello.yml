@@ -2,7 +2,7 @@ config:
   target: "http://ec2-18-191-213-234.us-east-2.compute.amazonaws.com"
   phases:
     - duration: 30
-      arrivalRate: 100
+      arrivalRate: 10
 scenarios:
   - flow:
     - get:

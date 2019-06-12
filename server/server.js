@@ -3,6 +3,7 @@ const cluster = require('cluster');
 const cpuCount = require('os').cpus().length;
 console.log(cpuCount)
 
+
 if (cluster.isMaster){
   for (let i = 0; i < cpuCount; i += 1) {
     cluster.fork();
@@ -52,6 +53,10 @@ if (cluster.isMaster){
       console.log('error', err);
     })
   });
+
+  app.get('/loaderio-09e651d335dcfd6cc7231ca0993c87c8', function (req, res) {
+    res.send('loaderio-09e651d335dcfd6cc7231ca0993c87c8')
+  })
   
   app.post('/reviews', function (req, res) {
     pool.getConnection()
