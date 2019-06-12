@@ -1,19 +1,19 @@
 
-// const cluster = require('cluster');
-// const cpuCount = require('os').cpus().length;
-// console.log(cpuCount)
+const cluster = require('cluster');
+const cpuCount = require('os').cpus().length;
+console.log(cpuCount)
 
-// if (cluster.isMaster){
-//   for (let i = 0; i < cpuCount; i += 1) {
-//     cluster.fork();
-//   }
-//   cluster.on('exit', function (worker) {
-//     console.log('Worker %d died :(', worker.id);
-//     cluster.fork();
+if (cluster.isMaster){
+  for (let i = 0; i < cpuCount; i += 1) {
+    cluster.fork();
+  }
+  cluster.on('exit', function (worker) {
+    console.log('Worker %d died :(', worker.id);
+    cluster.fork();
 
-// });
+});
 
-// } else {
+} else {
 
   
   const express = require('express');
@@ -115,10 +115,10 @@ app.put('/reviews', function (req, res) {
   let port = 3004;
   
   app.listen(port, function() {
-    //console.log(cluster.worker.id, `: listening on port ${port}`);
+    console.log(cluster.worker.id, `: listening on port ${port}`);
   });
   
-//}
+}
   // MONGODB CRUD
   
   // app.get('/reviews', function (req, res) {
