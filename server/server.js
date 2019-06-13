@@ -104,7 +104,7 @@ app.put('/reviews', function (req, res) {
     .catch(err => {
       console.log('error', err);
       conn.end();
-      res.end();
+      res.send();
     })
   })
   .catch(err => {
