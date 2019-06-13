@@ -48,7 +48,7 @@ class Reviews extends React.Component {
         let num = array.reduce((acc, cur) => {
             return acc + cur;
         });
-        return num / 5;
+        return num / array.length;
     }
 
     dateChanger(date) {
