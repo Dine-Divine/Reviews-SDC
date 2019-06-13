@@ -1,8 +1,6 @@
 
 const cluster = require('cluster');
 const cpuCount = require('os').cpus().length;
-console.log(cpuCount)
-
 
 if (cluster.isMaster){
   for (let i = 0; i < cpuCount; i += 1) {
@@ -16,13 +14,10 @@ if (cluster.isMaster){
 
 } else {
 
-  
   const express = require('express');
   const bodyParser = require('body-parser');
-  //const db = require('../database/index.js');
   const cors = require('cors');
   const app = express();
-  
   const {pool} = require('../database/dbinfo.js')
   
   app.use(cors());
@@ -51,6 +46,7 @@ if (cluster.isMaster){
     })
     .catch(err => {
       console.log('error', err);
+      res.send(err);
     })
   });
 
