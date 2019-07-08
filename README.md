@@ -1,39 +1,21 @@
 # Project Name
 
-> Project description
+  This repo is for the reviews microservice for the Dine-Divine Web App. This service was inherited from a previous project. This service started with 100 unique records and was scaled to 10,000,000 using MariaDB, Node.js, and React.
 
-## Related Projects
+## Here are the rest of the microservices for this app
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Dine-Divine/SDC-Fawnie-Service
+  - https://github.com/Dine-Divine/Recs
+  - https://github.com/Dine-Divine/Louis-Service
 
-## Table of Contents
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
 
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
 
 ### Installing Dependencies
 
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
 
