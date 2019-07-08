@@ -1,4 +1,4 @@
-# Project Name
+# SDC Review Microservice for Dine-Divine
 
   This repo is for the reviews microservice for the Dine-Divine Web App. This service was inherited from a previous project. This service started with 100 unique records and was scaled to 10,000,000 using MariaDB, Node.js, and React.
 
